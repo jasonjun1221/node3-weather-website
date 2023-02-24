@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e) => {
     // Codespace VS
     // https://jasonjun1221-opulent-space-giggle-4p67wgw97693qpjq-3000.preview.app.github.dev/weather?address=${search.value}
 
-    fetch(`http://localhost:3000/weather?address=${search.value}`).then((response) => {
+    fetch(`/weather?address=${search.value}`).then((response) => {
     response.json().then((data) => {
         if (data.error) {
             messageOne.textContent = data.error
